@@ -1,0 +1,188 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Sign Up</title>
+	<link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css" />   
+	<script type="text/javascript" src="/webjars/jquery/jquery.min.js"></script>
+	<script type="text/javascript" src="/webjars/bootstrap/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+	<div class="container text-center">
+		<div>
+			<h1>Add placed students</h1>
+
+
+
+
+
+			
+		</div>
+
+
+
+
+
+
+		<p>
+			<span matBadge="4" matBadgeOverlap="false">Text with a badge</span>
+		  </p>
+		  
+		  <p>
+			  <span matBadge="1" matBadgeSize="large">Text with large badge</span>
+		  </p>
+		  
+		  <p>
+			Button with a badge on the left
+			<button mat-raised-button color="primary"
+				matBadge="8" matBadgePosition="before" matBadgeColor="accent">
+			  Action
+			</button>
+		  </p>
+		  
+		  <p>
+			  Button toggles badge visibility
+			  <button mat-raised-button matBadge="7" [matBadgeHidden]="hidden" (click)="toggleBadgeVisibility()">
+				  Hide
+			  </button>
+		  </p>
+		  
+		  <p>
+			Icon with a badge
+			<mat-icon matBadge="15" matBadgeColor="warn">home</mat-icon>
+			  <!-- Include text description of the icon's meaning for screen-readers -->
+			  <span class="cdk-visually-hidden">
+				Example with a home icon with overlaid badge showing the number 15
+			  </span>
+		  </p>
+		  
+
+		  <div class="example-box" cdkDrag>
+			
+		 
+
+
+
+		  <mat-card>
+		<form (ngSubmit)="onSubmit()" 
+			method="post" style="max-width: 600px; margin: 0 auto;">
+
+
+
+
+
+
+
+
+
+			
+
+
+
+		<div class="m-3">
+			<div class="form-group row">
+				<label class="col-4 col-form-label">Name: </label>
+				<div class="col-8">
+					<input type="text" th:field="*{name}" placeholder="name" class="form-control"  id="name" required [(ngModel)]="student.name" name="name" required />
+				</div>
+			</div>
+         <br>   
+            
+            <div class="form-group row">
+				<label class="col-4 col-form-label">College: </label>
+				<div class="col-8">
+					<input type="text" th:field="*{college}" placeholder="college" class="form-control"   id="college" required [(ngModel)]="student.college" name="college" required />
+				</div>
+			</div>
+      <br>     
+            
+            
+      <div class="form-group row">
+				<label class="col-4 col-form-label">E-mail: </label>
+				<div class="col-8">
+					<input type="email"  placeholder="emailId" class="form-control"   pattern="^\S*[@]\S*[.]\S*$"  id = "emailId"  pattern="^\S*[@]\S*[.]\S*$"
+
+  [(ngModel)]="student.emailId" name="emailId" required />
+				</div>
+			</div>
+      <br>        
+            
+            <div class="form-group row">
+				<label class="col-4 col-form-label">Phone no: </label>
+				<div class="col-8">
+					<input type="text" th:field="*{phoneno}" placeholder="phoneno" class="form-control"   id="phoneno" required [(ngModel)]="student.phoneno" name="phoneno" required />
+				</div>
+			</div>
+      <br>   
+            
+            <div class="form-group row">
+				<label class="col-4 col-form-label">Course: </label>
+				<div class="col-8">
+					<input type="text" th:field="*{course}" placeholder="course" class="form-control"     id="course" required [(ngModel)]="student.course" name="course" required />
+				</div>
+			</div>
+      <br>   
+            
+            <div class="form-group row">
+				<label class="col-4 col-form-label">Semister </label>
+				<div class="col-8">
+					<input type="text" th:field="*{semister}" placeholder="semister" class="form-control"   id="semister" required [(ngModel)]="student.semister" name="semister" required />
+				</div>
+			</div>
+      <br>  
+            
+            <div class="form-group row">
+				<label class="col-4 col-form-label">Percentage: </label>
+				<div class="col-8">
+					<input type="text" th:field="*{percentage}" placeholder="percentage" class="form-control"     id="percentage" required [(ngModel)]="student.percentage" name="percentage" required />
+				</div>
+			</div>
+      <br>    
+            
+            <div class="form-group row">
+				<label class="col-4 col-form-label">Location: </label>
+				<div class="col-8">
+					<input type="text" th:field="*{location}" placeholder="location" class="form-control"   id="location" required [(ngModel)]="student.location" name="location" required />
+				</div>
+			</div>
+      <br>      
+            <div class="form-group row">
+				<label class="col-4 col-form-label">Company package
+: </label>
+				<div class="col-8">
+					<input type="text" th:field="*{comapanypackage}" placeholder="comapany package" class="form-control"id="companypackage" required [(ngModel)]="student.companypackage" name="companypackage" required />
+				</div>
+			</div>
+      <br>   
+            <div class="form-group row">
+				<label class="col-4 col-form-label">
+Company placed: </label>
+				<div class="col-8">
+					<input type="text" th:field="*{companyplaced}" placeholder="companyplaced" class="form-control"  id="companyplaced" required [(ngModel)]="student.companyplaced" name="companyplaced" required />
+				</div>
+			</div>
+      <br>   
+           
+			
+			
+			
+			<div>
+				<button type="submit" class="btn btn-success">Submit</button> 
+			</div>
+		</div>
+		</form>
+	</mat-card>
+	 </div>
+	</div>
+
+
+
+
+
+
+
+	
+</body>
+</html>

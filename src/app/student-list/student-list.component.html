@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+  width:100%;
+}
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 5px;
+  text-align: left;
+}
+table.names tr:nth-child(even) {
+  background-color: #eee;
+}
+table.names tr:nth-child(odd) {
+  background-color:#fff;
+}
+table.names th {
+  background-color: black;
+  color: white
+}
+</style>
+</head>
+<body>
+
+  <h2>List of Students Placed</h2>
+<br>
+
+<mat-card>
+  
+<table class="names">
+  
+  <tr>
+    
+
+    <!--  <th scope="col" (click)="students()">Id</th>   -->
+            <th scope="col" (onclick)="sortName('name')">name</th>
+            <th>College</th>
+            <th>Email Id</th>
+            <th>Course </th>
+            <th>Phone No</th>
+            
+            <th>Semister</th>
+            <th scope="col" (onclick)="sortPercentage()">Percentage</th>
+            <th>Location</th>
+            <th>Company package</th>
+            <th>Comapany Placed</th>
+          
+  </tr>
+
+  
+  <tr>
+     <tr *ngFor="let student of students|async ">
+   <!--    <td>{{student.id}}</td>    -->
+            <td>{{student.name}}</td>
+            <td>{{student.college}}</td>
+            <td>{{student.emailId}}</td>
+            <td>{{student.course}}</td>
+            <td>{{student.phoneno}}</td>
+            <td>{{student.semister}}</td>
+            <td>{{student.percentage}}</td>
+            <td>{{student.location}}</td>
+            <td>{{student.companypackage}}</td>
+            <td>{{student.companyplaced}}</td>
+            
+            <td>
+              <div class="example-focus-monitor">
+              <button (click)="deleteStudent(student.id)" class="btn btn-danger" (click)="openDialog()" >Delete</button>
+                <button (click)="updateStudent(student.id)" class="btn btn-info" style="margin-left: 10px">Update</button>
+                
+                </div>
+              </td>
+           
+  </tr>
+
+
+
+
+
+</table>
+
+</mat-card>
+</body>
+</html>
