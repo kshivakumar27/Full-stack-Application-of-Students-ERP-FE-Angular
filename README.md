@@ -8,7 +8,7 @@ ng serve -o
 
 ![Front page](https://github.com/kshivakumar27/Full-stack-Application-of-Students-ERP-FE-Angular/blob/main/Images/image1.png)
 
-![Student registered db List](https://github.com/kshivakumar27Full-stack-Application-of-Students-ERP-FE-Angular/blob/main/Images/image2.png)
+![Student registered db List](https://github.com/kshivakumar27/Full-stack-Application-of-Students-ERP-FE-Angular/blob/main/Images/image2.png)
 
 
 
