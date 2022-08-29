@@ -5,8 +5,8 @@ To run
 ng serve -o
 
 
-![Images](image1.png)
-![Images](image2.png)
+![Images](https://github.com/kshivakumar27/Full-stack-Application-of-Students-ERP-FE-Angular/tree/main/Images/image1.png)
+![Images](https://github.com/kshivakumar27/Full-stack-Application-of-Students-ERP-FE-Angular/tree/main/Images/image2.png)
 
 
 
